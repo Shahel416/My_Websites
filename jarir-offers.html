@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<script>
+  // Redirect to home/login if not logged in
+  if(localStorage.getItem("isLoggedIn") !== "true"){
+    window.location.href = "index.html"; // replace with your home page filename
+  }
+</script>
+
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jarir Offers</title>
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      margin: 0; 
+      padding: 20px; 
+      text-align: center; 
+      background: #f4f4f9; 
+      color: #333;
+      transition: background 0.3s, color 0.3s;
+    }
+    body.dark-mode {
+      background: #1e1e1e;
+      color: #f1f1f1;
+    }
+
+    header { 
+      font-size: 28px; 
+      margin-bottom: 30px; 
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      padding: 15px;
+      border-radius: 12px;
+      color: #222;
+      display: inline-block;
+      transition: background 0.3s, color 0.3s;
+    }
+    body.dark-mode header {
+      background: linear-gradient(135deg, #333, #555);
+      color: #fff;
+    }
+
+    ul { 
+      list-style: none; 
+      padding: 0; 
+    }
+    li { 
+      margin: 15px 0; 
+    }
+
+    .button {
+      display: block;
+      padding: 15px;
+      margin: 0 auto;
+      width: 280px;
+      background: linear-gradient(135deg, #f6d365, #fda085);
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s, background 0.3s;
+    }
+    .button:hover {
+      transform: translateY(-5px);
+      background: linear-gradient(135deg, #f093fb, #f5576c);
+    }
+
+    body.dark-mode .button {
+      background: linear-gradient(135deg, #434343, #000000);
+      color: #fff;
+    }
+    body.dark-mode .button:hover {
+      background: linear-gradient(135deg, #222, #555);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 30px; 
+      text-decoration: none; 
+      font-weight: bold; 
+      color: #4CAF50; 
+      transition: color 0.3s;
+    }
+    .back-link:hover {
+      color: #388E3C;
+    }
+    body.dark-mode .back-link {
+      color: #80e27e;
+    }
+    body.dark-mode .back-link:hover {
+      color: #4caf50;
+    }
+  </style>
+</head>
+<body>
+  <header>🔥 Jarir Offers</header>
+  <ul>
+    <li><a href="https://www.jarir.com/sa-en/weekly-offers.html?srsltid=AfmBOoqXfG2I-xVYzO_VJvkatITgmBwNl2EF-3SBT9c3YkRbyNAjSlES" class="button">Weekly Offers</a></li>
+    <li><a href="https://www.jarir.com/sa-en/special-offers?srsltid=AfmBOorrB_t3KHeCJSsxYVrmPG5V0wC758-Nt7odQPEXGfzazCsvtkY-" class="button">Special Offers</a></li>
+    <li><a href="https://www.jarir.com/sa-en/clearance-offers.html?srsltid=AfmBOop79g7H3g_5ABw0PacVFx8wySeM62iN_3bTUiigGJo0GssYQ32w" class="button">Clearance Offers</a></li>
+  </ul>
+  <a href="index.html" class="back-link">⬅️ Back to Home</a>
+
+  <script>
+    // Apply dark mode if main page has it
+    if(localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark-mode");
+    }
+  </script>
+</body>
+</html>

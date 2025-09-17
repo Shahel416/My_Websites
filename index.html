@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Marketplaces</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      color: #333;
+      transition: background 0.3s, color 0.3s;
+    }
+    header {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      padding: 20px;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      color: #222;
+    }
+    #toggleBtn {
+      display: block;
+      margin: 15px auto;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 25px;
+      background: #333;
+      color: #fff;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.3s, color 0.3s;
+    }
+    #toggleBtn:hover {
+      background: #555;
+    }
+
+    /* Market grid */
+    .markets {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    /* Card */
+    .card {
+      border-radius: 15px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    }
+    .card img {
+      max-width: 100%;
+      height: 120px;
+      object-fit: contain;
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+    .card .offers {
+      display: inline-block;
+      background: #ff6f61;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .card .offers:hover {
+      background: #ff3d2e;
+    }
+
+    /* Different colors for each card */
+    .card:nth-child(1) { background: linear-gradient(135deg, #ff9a9e, #fad0c4); }
+    .card:nth-child(2) { background: linear-gradient(135deg, #a1c4fd, #c2e9fb); }
+    .card:nth-child(3) { background: linear-gradient(135deg, #fbc2eb, #a6c1ee); }
+    .card:nth-child(4) { background: linear-gradient(135deg, #fdcbf1, #e6dee9); }
+    .card:nth-child(5) { background: linear-gradient(135deg, #a1ffce, #faffd1); }
+    .card:nth-child(6) { background: linear-gradient(135deg, #fddb92, #d1fdff); }
+    .card:nth-child(7) { background: linear-gradient(135deg, #84fab0, #8fd3f4); }
+    .card:nth-child(8) { background: linear-gradient(135deg, #ffecd2, #fcb69f); }
+    .card:nth-child(9) { background: linear-gradient(135deg, #f6d365, #fda085); }
+    .card:nth-child(10) { background: linear-gradient(135deg, #fccb90, #d57eeb); }
+    .card:nth-child(11) { background: linear-gradient(135deg, #e0c3fc, #8ec5fc); }
+    .card:nth-child(12) { background: linear-gradient(135deg, #f093fb, #f5576c); }
+    .card:nth-child(13) { background: linear-gradient(135deg, #43e97b, #38f9d7); }
+    .card:nth-child(14) { background: linear-gradient(135deg, #fa709a, #fee140); }
+    .card:nth-child(15) { background: linear-gradient(135deg, #30cfd0, #330867); }
+
+    /* Footer */
+   footer {
+  padding: 20px;
+  text-align: center;
+  background: #f8f9fa;
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+}
+
+.footer-logo-name {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centers the logo + name */
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.footer-logo img {
+  width: 50px;
+  height: auto;
+}
+
+.footer-name {
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none; /* remove underline */
+  background: linear-gradient(45deg, #ff6f61, #fddb92, #84fab0, #30cfd0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer-socials {
+  text-align: center;
+  margin: 0;        /* remove extra margin */
+  padding: 0;       /* remove extra padding */
+}
+
+.footer-socials a {
+  font-size: 20px;
+  margin: 0 8px;    /* space between icons */
+  transition: transform 0.3s, color 0.3s;
+  color: #555;
+}
+
+.footer-socials a:hover {
+  transform: scale(1.2);
+  color: #ff6f61;
+}
+
+.footer-copy {
+  text-align: center;
+  margin: 15px 0 0 0;   /* small top margin to slightly separate from icons */
+  font-size: 14px;
+  color: #333;
+}
+
+/* Social colors */
+.footer-socials a:nth-child(1) { color: #3b5998; }
+.footer-socials a:nth-child(2) { color: #1da1f2; }
+.footer-socials a:nth-child(3) { color: #c13584; }
+.footer-socials a:nth-child(4) { color: #6441a5; }
+.footer-socials a:nth-child(5) { color: #69c9d0; }
+.footer-socials a:nth-child(6) { color: #ff0000; }
+.footer-socials a:nth-child(7) { color: #0088cc; }
+
+/* Dark mode */
+.dark-mode footer {
+  background: #111;
+  color: #f1f1f1;
+}
+
+.dark-mode .footer-name {
+  background: none;
+  -webkit-text-fill-color: #fff;
+}
+
+.dark-mode .footer-socials a {
+  color: #fff !important;
+}
+
+
+
+    /* Dark mode */
+    .dark-mode {
+      background: #1e1e1e;
+      color: #f1f1f1;
+    }
+    .dark-mode header {
+      background: linear-gradient(135deg, #333, #555);
+      color: #fff;
+    }
+    .dark-mode #toggleBtn {
+      background: #eee;
+      color: #333;
+    }
+    .dark-mode footer {
+      background: #111;
+    }
+  </style>
+</head>
+<body>
+  <header>🛒 Shahel Gaming Marketplaces</header>
+  <button id="toggleBtn">🌙 Dark Mode</button>
+
+  <div class="markets">
+    <div class="card"><a href="https://www.noon.com" target="_blank"><img src="https://cartlow.gumlet.io/product/9eac2601-c9d0-4d32-8eb4-4f0c24b118cd.png" alt="Noon"></a><a class="offers" href="noon-offers.html">New Offers</a></div>
+    <div class="card"><a href="https://www.amazon.com" target="_blank"><img src="https://m.media-amazon.com/images/I/61+nI2GbVCL.png" alt="Amazon"></a><a class="offers" href="amazon-offers.html">New Offers</a></div>
+    <div class="card"><a href="https://www.carrefouruae.com" target="_blank"><img src="https://play-lh.googleusercontent.com/MWadEoaHru4kzqyGIxnkftmdvwa-Np4LKRb3zf2PEiyo7ByXAGoGJG0Sa2EdFPlnnVLf" alt="Carrefour"></a><a class="offers" href="carrefour-offers.html">New Offers</a></div>
+    <div class="card"><a href="https://www.noon.com/uae-en/fashion" target="_blank"><img src="https://yt3.googleusercontent.com/LIj2UmtNDPXTIQuD2s3Iu1XzP17qUL4ZILjvljuNrpTwU6qnURYccjKLKVEbh6hJ899ZkuGo=s900-c-k-c0x00ffffff-no-rj" alt="Namshi"></a><a class="offers" href="namshi-offers.html">New Offers</a></div>
+    <div class="card"><a href="https://zedo.com" target="_blank"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/50/0c/21/500c212b-9fa2-b5b1-6ef1-49e15d5c7e98/AppIcon-0-0-1x_U007emarketing-0-5-0-85-220.png/512x512bb.jpg" alt="Zedo"></a><a class="offers" href="zedo-offers.html">New Offers</a></div>
+    <div class="card"><a href="https://clicflyer.com" target="_blank"><img src="https://media.licdn.com/dms/image/v2/C510BAQG_Wx7tnA-3Uw/company-logo_200_200/company-logo_200_200/0/1631404374400/clicflyer_logo?e=2147483647&v=beta&t=rh5qbfGsM1LUxHQgRFXzk913-hfTz8-RqpDVj_MXIPw" alt="Clicflyer"></a><a class="offers" href="clicflyer-offers.html">New Offers</a></div>
+    <div class="card"><a href="https://www.aliexpress.com" target="_blank"><img src="https://daoinsights.com/wp-content/uploads/2021/01/HaggleDog.com_.jpg" alt="AliExpress"></a><a class="offers" href="aliexpress-offers.html">New Offers</a></div>
+    <div class="card"><a href="https://www.daraz.com" target="_blank"><img src="https://i.brecorder.com/primary/2023/02/0622341446411c3.jpg" alt="Daraz"></a><a class="offers" href="daraz-offers.html">New Offers</a></div>
+    <div class="card"><a href="https://www.shein.com" target="_blank"><img src="https://a.storyblok.com/f/182663/2688x1512/a99c3cd94a/shein.png/m/3840x0/filters:quality(85)" alt="Shein"></a><a class="offers" href="shein-offers.html">New Offers</a></div>
+    <div class="card"><a href="https://www.hungerstation.com" target="_blank"><img src="https://rexsouq.com/image/cache/catalog/Online-Shop/HungerStation/HungerStation-Customers-GiftCard-SAR-200-600x315w.png.webp" alt="Hungerstation"></a><a class="offers" href="hungerstation-offers.html">New Offers</a></div>
+    <div class="card"><a href="https://www.jarir.com" target="_blank"><img src="https://dealzsaudi.com/filemanager/uploads/jarir-bookstore-vector-logo.webp" alt="Jarir"></a><a class="offers" href="jarir-offers.html">New Offers</a></div>
+    <div class="card"><a href="https://keeta.com" target="_blank"><img src="https://play-lh.googleusercontent.com/hu-fDD8dvJ2j6cDa0CQ7l8FHcfOPP0YGqk6C4DfabkZV5GRNDWNuRtCkgOtkfpCAd2v9QW3CdmXrxc9rlqo-pxw" alt="Keeta"></a><a class="offers" href="keeta-offers.html">New Offers</a></div>
+    <div class="card"><a href="https://ninja.com" target="_blank"><img src="https://www.propos.com.sa/images/software-partner/Ninja.jpg" alt="Ninja"></a><a class="offers" href="ninja-offers.html">New Offers</a></div>
+    <div class="card"><a href="https://trendyol.com" target="_blank"><img src="https://d22nihcmq83fqg.cloudfront.net/sites/default/files/styles/icon_image/public/store_icon/trendyol-logo-en-arabiccoupon-trendyol-coupons-and-promo-codes-400x400.jpg" alt="Trendyol"></a><a class="offers" href="trendyol-offers.html">New Offers</a></div>
+    <div class="card"><a href="https://www.temu.com" target="_blank"><img src="https://s3-eu-west-1.amazonaws.com/tpd/logos/6335ac89378fdbaca36b576b/0x0.png" alt="Temu"></a><a class="offers" href="temu-offers.html">New Offers</a></div>
+  </div>
+
+ <footer>
+  <div class="footer-content">
+    <div class="footer-logo-name">
+      <a href="https://shahel416.github.io/My_Website/" class="footer-logo">
+        <img src="https://raw.githubusercontent.com/Shahel416/My_Website/main/Picsart_24-11-03_08-31-16-806.png" alt="Shahel Gaming Logo">
+      </a>
+      <a href="https://shahel416.github.io/My_Website/" class="footer-name">Shahel Gaming</a>
+    </div>
+
+    <div class="footer-socials">
+  <a href="https://cutt.ly/ceBisay9" target="_blank"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://cutt.ly/7eBiaKdj" target="_blank"><i class="fab fa-twitter"></i></a>
+  <a href="https://cutt.ly/geBiacDy" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="https://cutt.ly/7eBiaKdj" target="_blank"><i class="fab fa-twitch"></i></a>
+  <a href="https://cutt.ly/oeBiaAHI" target="_blank"><i class="fab fa-tiktok"></i></a>
+  <a href="https://cutt.ly/JeBisrmI" target="_blank"><i class="fab fa-youtube"></i></a>
+  <a href="https://cutt.ly/6eBia4ng" target="_blank"><i class="fab fa-telegram"></i></a>
+</div>
+
+<p class="footer-copy">&copy; 2025 Shahel Gaming Marketplace. All rights reserved.</p>
+
+</footer>
+
+  <script>
+    const btn = document.getElementById("toggleBtn");
+    const body = document.body;
+    if(localStorage.getItem("theme") === "dark"){
+      body.classList.add("dark-mode");
+      btn.textContent = "☀️ Light Mode";
+    }
+    btn.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+      if(body.classList.contains("dark-mode")){
+        btn.textContent = "☀️ Light Mode";
+        localStorage.setItem("theme", "dark");
+      } else {
+        btn.textContent = "🌙 Dark Mode";
+        localStorage.setItem("theme", "light");
+      }
+    });
+  </script>
+</body>
+</html>

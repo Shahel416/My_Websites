@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<script>
+  // Redirect to home/login if not logged in
+  if(localStorage.getItem("isLoggedIn") !== "true"){
+    window.location.href = "index.html"; // replace with your home page filename
+  }
+</script>
+
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zedo Offers</title>
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      margin:0; 
+      padding:20px; 
+      text-align:center; 
+      background:#f4f4f9; 
+      color:#333; 
+      transition: background 0.3s, color 0.3s;
+    }
+    body.dark-mode {
+      background: #1e1e1e;
+      color: #f1f1f1;
+    }
+
+    header { 
+      font-size:28px; 
+      margin-bottom:30px; 
+      background: linear-gradient(135deg, #f093fb, #f5576c);
+      padding: 15px;
+      border-radius: 12px;
+      color:#fff;
+      display: inline-block;
+      transition: background 0.3s, color 0.3s;
+    }
+    body.dark-mode header {
+      background: linear-gradient(135deg, #333, #555);
+      color: #fff;
+    }
+
+    ul { list-style:none; padding:0; }
+    li { 
+      margin: 15px auto; 
+      padding: 15px; 
+      width: 280px;
+      border-radius:12px; 
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      color:#fff;
+      font-weight:bold;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s, background 0.3s;
+    }
+    li:hover {
+      transform: translateY(-5px);
+      background: linear-gradient(135deg, #43e97b, #38f9d7);
+    }
+    body.dark-mode li {
+      background: linear-gradient(135deg, #434343, #000);
+      color:#fff;
+    }
+    body.dark-mode li:hover {
+      background: linear-gradient(135deg, #222, #555);
+    }
+
+    a.back-link {
+      display:inline-block; 
+      margin-top:30px; 
+      text-decoration:none; 
+      font-weight:bold; 
+      color:#4CAF50;
+      transition: color 0.3s;
+    }
+    a.back-link:hover { color:#388E3C; }
+    body.dark-mode a.back-link { color:#80e27e; }
+    body.dark-mode a.back-link:hover { color:#4caf50; }
+  </style>
+</head>
+<body>
+  <header>🔥 Zedo Latest Offers</header>
+  <ul>
+    <li>Offer 1</li>
+    <li>Offer 2</li>
+    <li>Offer 3</li>
+  </ul>
+  <a href="index.html" class="back-link">⬅️ Back to Home</a>
+
+  <script>
+    // Apply dark mode if main page has it
+    if(localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark-mode");
+    }
+  </script>
+</body>
+</html>
