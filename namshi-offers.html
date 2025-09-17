@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon Offers</title>
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      margin: 0; 
+      padding: 20px; 
+      text-align: center; 
+      transition: background 0.3s, color 0.3s;
+      background: #f4f4f9; 
+      color: #333;
+    }
+    body.dark-mode {
+      background: #1e1e1e;
+      color: #f1f1f1;
+    }
+
+    header { 
+      font-size: 28px; 
+      margin-bottom: 30px; 
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      padding: 15px;
+      border-radius: 12px;
+      color: #222;
+      display: inline-block;
+      transition: background 0.3s, color 0.3s;
+    }
+    body.dark-mode header {
+      background: linear-gradient(135deg, #333, #555);
+      color: #fff;
+    }
+
+    ul { 
+      list-style: none; 
+      padding: 0; 
+    }
+    li { 
+      margin: 15px 0; 
+    }
+
+    .button {
+      display: block;
+      padding: 15px;
+      margin: 0 auto;
+      width: 250px;
+      background: linear-gradient(135deg, #f6d365, #fda085);
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s, background 0.3s;
+    }
+    .button:hover {
+      transform: translateY(-5px);
+      background: linear-gradient(135deg, #f093fb, #f5576c);
+    }
+
+    body.dark-mode .button {
+      background: linear-gradient(135deg, #434343, #000000);
+      color: #fff;
+    }
+    body.dark-mode .button:hover {
+      background: linear-gradient(135deg, #222, #555);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 30px; 
+      text-decoration: none; 
+      font-weight: bold; 
+      color: #4CAF50; 
+      transition: color 0.3s;
+    }
+    .back-link:hover {
+      color: #388E3C;
+    }
+    body.dark-mode .back-link {
+      color: #80e27e;
+    }
+    body.dark-mode .back-link:hover {
+      color: #4caf50;
+    }
+  </style>
+</head>
+<body>
+  <header>🔥 Amazon Latest Offers</header>
+  <ul>
+    <li><a href="https://www.amazon.com/gp/goldbox" class="button">Today's Deals</a></li>
+    <li><a href="https://www.amazon.sa/-/en/b/?_encoding=UTF8&node=20509033031&ref_=nav_swm_swm-en&pf_rd_p=4697d5d7-4748-48a3-b94d-e79212029b0b&pf_rd_s=nav-sitewide-msg&pf_rd_t=4201&pf_rd_i=navbar-4201&pf_rd_m=A17E79C6D8DWNP&pf_rd_r=2EBP82EY0CPR0WCH0PDQ" class="button">Every Day Essentials</a></li>
+    <li><a href="https://www.amazon.sa/-/en/l/29140079031/?_encoding=UTF8&pd_rd_w=Qr1Lb&content-id=amzn1.sym.4c392bb6-4d72-4b78-bf34-bf0304e69cb5&pf_rd_p=4c392bb6-4d72-4b78-bf34-bf0304e69cb5&pf_rd_r=Z27K67W1JK0RRQQF0E15&pd_rd_wg=rM9Ct&pd_rd_r=e62d9f56-a073-48cc-93f8-ff3ed3590daa&ref_=pd_hp_d_hero_unk" class="button">Big Offers</a></li>
+  </ul>
+  <a href="index.html" class="back-link">⬅️ Back to Home</a>
+
+  <script>
+    // Automatically apply dark mode if set on main page
+    if(localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark-mode");
+    }
+  </script>
+</body>
+</html>
