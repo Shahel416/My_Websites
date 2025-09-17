@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,11 +8,11 @@
   <style>
     body { 
       font-family: Arial, sans-serif; 
-      margin:0; 
-      padding:20px; 
-      text-align:center; 
-      background:#f4f4f9; 
-      color:#333; 
+      margin: 0; 
+      padding: 20px; 
+      text-align: center; 
+      background: #f4f4f9; 
+      color: #333;
       transition: background 0.3s, color 0.3s;
     }
     body.dark-mode {
@@ -20,12 +21,12 @@
     }
 
     header { 
-      font-size:28px; 
-      margin-bottom:30px; 
-      background: linear-gradient(135deg, #f093fb, #f5576c);
+      font-size: 28px; 
+      margin-bottom: 30px; 
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
       padding: 15px;
       border-radius: 12px;
-      color:#fff;
+      color: #222;
       display: inline-block;
       transition: background 0.3s, color 0.3s;
     }
@@ -34,48 +35,63 @@
       color: #fff;
     }
 
-    ul { list-style:none; padding:0; }
+    ul { 
+      list-style: none; 
+      padding: 0; 
+    }
     li { 
-      margin: 15px auto; 
-      padding: 15px; 
+      margin: 15px 0; 
+    }
+
+    .button {
+      display: block;
+      padding: 15px;
+      margin: 0 auto;
       width: 280px;
-      border-radius:12px; 
-      background: linear-gradient(135deg, #4facfe, #00f2fe);
-      color:#fff;
-      font-weight:bold;
+      background: linear-gradient(135deg, #f6d365, #fda085);
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 12px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.2);
       transition: transform 0.3s, background 0.3s;
     }
-    li:hover {
+    .button:hover {
       transform: translateY(-5px);
-      background: linear-gradient(135deg, #43e97b, #38f9d7);
+      background: linear-gradient(135deg, #f093fb, #f5576c);
     }
-    body.dark-mode li {
-      background: linear-gradient(135deg, #434343, #000);
-      color:#fff;
+
+    body.dark-mode .button {
+      background: linear-gradient(135deg, #434343, #000000);
+      color: #fff;
     }
-    body.dark-mode li:hover {
+    body.dark-mode .button:hover {
       background: linear-gradient(135deg, #222, #555);
     }
 
-    a.back-link {
-      display:inline-block; 
-      margin-top:30px; 
-      text-decoration:none; 
-      font-weight:bold; 
-      color:#4CAF50;
+    .back-link {
+      display: inline-block;
+      margin-top: 30px; 
+      text-decoration: none; 
+      font-weight: bold; 
+      color: #4CAF50; 
       transition: color 0.3s;
     }
-    a.back-link:hover { color:#388E3C; }
-    body.dark-mode a.back-link { color:#80e27e; }
-    body.dark-mode a.back-link:hover { color:#4caf50; }
+    .back-link:hover {
+      color: #388E3C;
+    }
+    body.dark-mode .back-link {
+      color: #80e27e;
+    }
+    body.dark-mode .back-link:hover {
+      color: #4caf50;
+    }
   </style>
 </head>
 <body>
-  <header>🔥 Temu Latest Offers</header>
+  <header>🔥 Temu Offers</header>
   <ul>
-    <li><a href="https://www.temu.com/ul/kuiper/un2.html?_p_rfs=1&subj=un-search-web&_p_jump_id=960&_x_vst_scene=adg&search_key=Best%20Sellers&_x_ads_channel=google&_x_ads_sub_channel=search&adg_ctx=m-26bf74c0~f-c3fb1ef4&_x_ads_account=4898917807&_x_ads_set=21922203772&_x_ads_id=173662756314&_x_ads_creative_id=721859731667&_x_ns_source=g&_x_ns_gclid=EAIaIQobChMIn4C3qejgjwMVBKyDBx0bAgWoEAAYASABEgLwI_D_BwE&_x_ns_placement=&_x_ns_match_type=p&_x_ns_ad_position=&_x_ns_product_id=&_x_ns_target=&_x_ns_devicemodel=&_x_ns_wbraid=Ck0KCQjwlaTGBhC0ARI8AC1Ywm2jCV2bAMPN9znWguzPvHFqCqpS1Q2g-bUHHEs30MxTtvqqPYb_ST1tCc3ULqze0P25RSZiebYaGgIgdw&_x_ns_gbraid=0AAAAAo4mICEDxnDO3UTCcN2fHi5c4aaMT&_x_ns_keyword=temu&_x_ns_targetid=kwd-368867843197&_x_ns_extensionid=184407525562&gad_source=1&gad_campaignid=21922203772&gbraid=0AAAAAo4mICEDxnDO3UTCcN2fHi5c4aaMT&gclid=EAIaIQobChMIn4C3qejgjwMVBKyDBx0bAgWoEAAYASABEgLwI_D_BwE" class="button">
-Best Sellers</a></li>
+    <li><a href="https://www.temu.com/ul/kuiper/un2.html?_p_rfs=1&subj=un-search-web&_p_jump_id=960&_x_vst_scene=adg&search_key=Best%20Sellers&_x_ads_channel=google&_x_ads_sub_channel=search&adg_ctx=m-26bf74c0~f-c3fb1ef4&_x_ads_account=4898917807&_x_ads_set=21922203772&_x_ads_id=173662756314&_x_ads_creative_id=721859731667&_x_ns_source=g&_x_ns_gclid=EAIaIQobChMIn4C3qejgjwMVBKyDBx0bAgWoEAAYASABEgLwI_D_BwE&_x_ns_placement=&_x_ns_match_type=p&_x_ns_ad_position=&_x_ns_product_id=&_x_ns_target=&_x_ns_devicemodel=&_x_ns_wbraid=Ck0KCQjwlaTGBhC0ARI8AC1Ywm2jCV2bAMPN9znWguzPvHFqCqpS1Q2g-bUHHEs30MxTtvqqPYb_ST1tCc3ULqze0P25RSZiebYaGgIgdw&_x_ns_gbraid=0AAAAAo4mICEDxnDO3UTCcN2fHi5c4aaMT&_x_ns_keyword=temu&_x_ns_targetid=kwd-368867843197&_x_ns_extensionid=184407525562&gad_source=1&gad_campaignid=21922203772&gbraid=0AAAAAo4mICEDxnDO3UTCcN2fHi5c4aaMT&gclid=EAIaIQobChMIn4C3qejgjwMVBKyDBx0bAgWoEAAYASABEgLwI_D_BwE" class="button">Best Sellers</a></li>
     <li><a href="https://www.temu.com/sa-en/attendance/national-day-sale-sa-47661-1-a-psurl.html?_x_chnl_src=top_banner&_x_big_sale_name=saudi_founding_day&refer_page_el_sn=203471&_x_vst_scene=adg&_x_ads_channel=google&_x_ads_sub_channel=search&_x_ads_account=4898917807&_x_ads_set=21922203772&_x_ads_id=173662756314&_x_ads_creative_id=721859731667&_x_ns_source=g&_x_ns_gclid=EAIaIQobChMIn4C3qejgjwMVBKyDBx0bAgWoEAAYASABEgLwI_D_BwE&_x_ns_placement=&_x_ns_match_type=p&_x_ns_ad_position=&_x_ns_product_id=&_x_ns_target=&_x_ns_devicemodel=&_x_ns_wbraid=Ck0KCQjwlaTGBhC0ARI8AC1Ywm2jCV2bAMPN9znWguzPvHFqCqpS1Q2g-bUHHEs30MxTtvqqPYb_ST1tCc3ULqze0P25RSZiebYaGgIgdw&_x_ns_gbraid=0AAAAAo4mICEDxnDO3UTCcN2fHi5c4aaMT&_x_ns_keyword=temu&_x_ns_targetid=kwd-368867843197&_x_ns_extensionid=184407525562&_x_sessn_id=rxup0spgnl&refer_page_name=home&refer_page_id=10005_1758147156360_c1dpxx0k34&refer_page_sn=10005" class="button">National Day Sale</a></li>
     <li><a href="https://www.temu.com/sa-en/channel/lightning-deals.html?same_see=AAAAqgAAAJ%252FwCgoPCLu%252F5sKm1ogBEODutNgDCg8Ir9jTrqcRANCanI2kBQoPCN%252Bsp7SqEQDQiu6f0AQKDwjFm4eirhEA0NuwqNsCCg8I2860ragRAMHHhtuNAQoPCLn3w%252BtVAECf8JDVEQBQmp2wjK8iAEDagr3ERABBr4iAyzMAQNG8xot3AEHjr8u1EQDwB6jDt%252BAGCg8IpbnUyqbWiAEQ28CWowQ%253D&_x_channel_src=1&_x_channel_scene=spike&refer_page_el_sn=201373&_x_vst_scene=adg&_x_ads_channel=google&_x_ads_sub_channel=search&_x_ads_account=4898917807&_x_ads_set=21922203772&_x_ads_id=173662756314&_x_ads_creative_id=721859731667&_x_ns_source=g&_x_ns_gclid=EAIaIQobChMIn4C3qejgjwMVBKyDBx0bAgWoEAAYASABEgLwI_D_BwE&_x_ns_placement=&_x_ns_match_type=p&_x_ns_ad_position=&_x_ns_product_id=&_x_ns_target=&_x_ns_devicemodel=&_x_ns_wbraid=Ck0KCQjwlaTGBhC0ARI8AC1Ywm2jCV2bAMPN9znWguzPvHFqCqpS1Q2g-bUHHEs30MxTtvqqPYb_ST1tCc3ULqze0P25RSZiebYaGgIgdw&_x_ns_gbraid=0AAAAAo4mICEDxnDO3UTCcN2fHi5c4aaMT&_x_ns_keyword=temu&_x_ns_targetid=kwd-368867843197&_x_ns_extensionid=184407525562&_x_sessn_id=rxup0spgnl&refer_page_name=home&refer_page_id=10005_1758147156360_c1dpxx0k34&refer_page_sn=10005" class="button">Lightning Deals</a></li>
   </ul>
