@@ -7,6 +7,62 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
+
+/* Mobile responsive fixes */
+@media (max-width: 768px) {
+  header {
+    font-size: 1.5rem;
+    padding: 15px;
+  }
+
+  #toggleBtn {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+
+  .markets {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* smaller columns for mobile */
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  .card img {
+    height: 90px; /* smaller images */
+    margin-bottom: 8px;
+  }
+
+  .card .offers {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  footer {
+    padding: 15px;
+  }
+
+  .footer-logo img {
+    width: 40px;
+  }
+
+  .footer-name {
+    font-size: 16px;
+  }
+
+  .footer-socials a {
+    font-size: 18px;
+    margin: 0 6px;
+  }
+
+  .footer-copy {
+    font-size: 12px;
+  }
+}
+
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
