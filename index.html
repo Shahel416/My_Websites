@@ -7,10 +7,19 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-
-    /* Mobile view: 2 cards per row */
+    
+/* Mobile responsive fixes */
 @media (max-width: 768px) {
-  .markets {
+  header {
+    font-size: 1.5rem;
+    padding: 15px;
+  }
+
+  #toggleBtn {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+ .markets {
     grid-template-columns: repeat(2, 1fr); /* ২টা card প্রতি row */
     gap: 15px;
     padding: 10px;
@@ -29,19 +38,6 @@
     padding: 6px 10px;
   }
 }
-    
-/* Mobile responsive fixes */
-@media (max-width: 768px) {
-  header {
-    font-size: 1.5rem;
-    padding: 15px;
-  }
-
-  #toggleBtn {
-    font-size: 12px;
-    padding: 8px 16px;
-  }
-
   footer {
     padding: 15px;
   }
